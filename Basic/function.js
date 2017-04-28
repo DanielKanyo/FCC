@@ -128,3 +128,18 @@ function truncateString(str, num) {
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 100);*/
+
+/*//Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+  var result = [];
+  var step = 0;
+  var j = 0;
+  for(var i = 0; i < arr.length; i += size) {
+    result[j++] = arr.slice(i, step += size);
+  }
+  return result;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3);
+*/ 

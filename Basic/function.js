@@ -142,4 +142,29 @@ function chunkArrayInGroups(arr, size) {
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
 chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3);
-*/ 
+*/
+
+//Slasher Flick 1
+/*function slasher(arr, howMany) {
+  if (howMany === 0) {
+    return arr;
+  } else if (howMany > arr.length) {
+    return [];
+  } else {
+    var sliced = arr.slice(howMany);
+    console.log(sliced);
+    return sliced;
+  }
+}
+
+slasher([1, 2, 3], 1);
+slasher([1, 2, 3], 4);
+slasher([1, 2, "chicken", 3, "potatoes", "cheese", 4], 2);
+//Slasher Flick 2
+function slasher(arr, howMany) {
+  var result = arr.slice(howMany,arr.lenght);
+
+  return result;
+}
+
+slasher([1, 2, 3], 9);*/

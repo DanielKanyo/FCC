@@ -168,3 +168,27 @@ function slasher(arr, howMany) {
 }
 
 slasher([1, 2, 3], 9);*/
+
+/*//Mutations
+function mutation(arr) {
+  var secondElement = arr[1].toLowerCase();
+  var secWord = secondElement.split("");
+  var counter = 0;
+  var firstWord = arr[0].toLowerCase();
+
+  for (var j = 0; j < secWord.length; j++) {
+    if ((firstWord.indexOf(secWord[j])) >= 0) {
+      ++counter;
+    }
+  }
+
+  if (counter >= secWord.length) {
+    console.log("true");
+    return true;
+  }
+  console.log("false");
+  return false;
+}
+
+mutation(["floor", "for"]);
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);*/

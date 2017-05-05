@@ -177,17 +177,11 @@ function mutation(arr) {
   var firstWord = arr[0].toLowerCase();
 
   for (var j = 0; j < secWord.length; j++) {
-    if ((firstWord.indexOf(secWord[j])) >= 0) {
-      ++counter;
+    if ((firstWord.indexOf(secWord[j])) < 0) {
+      return false;
     }
   }
-
-  if (counter >= secWord.length) {
-    console.log("true");
-    return true;
-  }
-  console.log("false");
-  return false;
+  return true;
 }
 
 mutation(["floor", "for"]);

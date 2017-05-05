@@ -186,3 +186,29 @@ function mutation(arr) {
 
 mutation(["floor", "for"]);
 mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);*/
+
+/*//Falsy Bouncer
+function bouncer(arr) {
+  var res = arr.filter(function(word) {
+    var booleanWord = Boolean(word);
+    if (booleanWord) {
+      return word;
+    }
+  });
+  return res;
+}
+
+bouncer([7, "ate", "", NaN, false, 9]);*/
+
+/*//Seek and Destroy
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+function destroyer(arr) {
+  var args = Array.prototype.slice.call(arguments);
+  var removeElementsArr = args.slice(1);
+
+    return arr.filter(function(value) {
+      return removeElementsArr.indexOf(value) == -1;
+    });
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3, 5, 6);*/

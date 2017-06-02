@@ -212,3 +212,46 @@ function destroyer(arr) {
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3, 5, 6);*/
+
+/*//Where do I belong
+function getIndexToIns(arr, num) {
+  arr = arr.sort(function(a, b) {
+    return a - b;
+  });
+  var i;
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] >= num) {
+      return i;
+    }
+  }
+  return i;
+}
+
+getIndexToIns([40, 60], 50);
+getIndexToIns([5, 3, 20, 3], 5);
+getIndexToIns([2, 5, 10], 15);*/
+
+/*//Caesars Cipher / rot13
+function rot13(str) {
+  var numArr = [];
+  var strArr = [];
+
+  for (var i = 0; i < str.length; i++) {
+    numArr[i] = str.charCodeAt(i);
+    // 65 == A, 90 == Z
+    if (numArr[i] >= 65 && numArr[i] <= 90) {
+      numArr[i] += 13;
+    }
+    //if num > 90 then subtract one abc
+    if (numArr[i] > 90) {
+      numArr[i] -= 26;
+    }
+    strArr[i] = String.fromCharCode(numArr[i]);
+  }
+  str = strArr.join("");
+  return str;
+}
+
+rot13("SERR PBQR PNZC!");
+rot13("SERR CVMMN!");
+rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");*/

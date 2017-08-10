@@ -1,4 +1,4 @@
-/*Reverse string
+/*//Reverse string
 function reverseString(str) {
   str = str.split("");
   str = str.reverse();
@@ -8,7 +8,7 @@ function reverseString(str) {
 reverseString("hello");
 reverseString("Greetings from Earth");*/
 
-/*Fact
+/*//Fact
 function factorialize(num) {
   var counter = 1;
   for (var i = 1; i <= num; i++) {
@@ -18,7 +18,7 @@ function factorialize(num) {
 }
 factorialize(3);*/
 
-/*Check for Palindromes
+/*//Check for Palindromes
 function palindrome(str) {
   str = str.toLowerCase();
   var rx = str.replace(/[&\/\\_#,+()$~%.'":*?<>{}\- ]/g, '');
@@ -31,7 +31,7 @@ function palindrome(str) {
 }
 palindrome("0_0 (: /-\ :) 0-0");*/
 
-/*Find the Longest Word in a String
+/*//Find the Longest Word in a String
 function findLongestWord(str) {
   str = str.split(" ");
   var maxNum = 0;
@@ -44,8 +44,8 @@ function findLongestWord(str) {
 }
 findLongestWord("The quick brown fox jumped over the lazy dog");*/
 
-//Title Case a Sentence
-/*function titleCase(str) {
+/*//Title Case a Sentence
+function titleCase(str) {
   str = str.toLowerCase().split("");
   str[0] = str[0].toUpperCase();
   for (var i = 0; i < str.length; i++) {
@@ -255,3 +255,32 @@ function rot13(str) {
 rot13("SERR PBQR PNZC!");
 rot13("SERR CVMMN!");
 rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");*/
+
+/*
+* INTERMEDIATE ALGORITHM SCRIPTING
+*/
+
+/*//Sum All Numbers in a Range
+function sumAll(arr) {
+  maxNum = Math.max(arr[0],arr[1]);
+  minNum = Math.min(arr[0],arr[1]);
+  var NumbersSum = 0;
+
+  for (var minNum; minNum <= maxNum; minNum++) {
+    NumbersSum = NumbersSum + minNum;
+  }
+  console.log(NumbersSum);
+  return NumbersSum;
+}
+
+sumAll([4, 1]);*/
+
+//Diff Two Arrays
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  // Same, same; but different, but still same.
+  return newArr;
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+

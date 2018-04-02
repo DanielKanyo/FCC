@@ -277,10 +277,34 @@ sumAll([4, 1]);*/
 
 //Diff Two Arrays
 function diffArray(arr1, arr2) {
+  var longerArr =  [];
+  var shorterArr = [];
   var newArr = [];
-  // Same, same; but different, but still same.
+
+  if (arr1.length < arr2.length) {
+    longerArr = arr2;
+    shorterArr = arr1;
+  } else {
+    longerArr = arr1;
+    shorterArr = arr2;
+  }
+  
+  for (var i = 0; i < longerArr.length; i++) {
+    if (shorterArr.indexOf(longerArr[i]) == -1) {
+      newArr.push(longerArr[i]);
+    }
+  }
+  for (var j = 0; j < shorterArr.length; j++) {
+    if (longerArr.indexOf(shorterArr[j]) == -1) {
+      newArr.push(shorterArr[j]);
+    }
+  }
+
+  console.log(newArr);
+
   return newArr;
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
 

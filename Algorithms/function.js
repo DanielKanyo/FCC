@@ -257,8 +257,8 @@ rot13("SERR CVMMN!");
 rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK.");*/
 
 /*
-* INTERMEDIATE ALGORITHM SCRIPTING
-*/
+ * INTERMEDIATE ALGORITHM SCRIPTING
+ */
 
 /*//Sum All Numbers in a Range
 function sumAll(arr) {
@@ -275,7 +275,7 @@ function sumAll(arr) {
 
 sumAll([4, 1]);*/
 
-//Diff Two Arrays
+/*//Diff Two Arrays
 function diffArray(arr1, arr2) {
   var longerArr =  [];
   var shorterArr = [];
@@ -306,5 +306,66 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
-diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);
+diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);*/
 
+//Roman Numeral Converter
+function convertToRoman(num) {
+
+  var symbols = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX",
+    "XC", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM", "M"
+  ];
+  var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+  var numberArray = num.toString().split("");
+  var numberArrayConverted = [];
+  var counter = 0;
+
+  // console.log(numberArray);
+
+  function getMultiplier(i) {
+    var multiplier = 1;
+    for (var k = 1; k < i; k++) {
+      multiplier *= 10;
+    }
+    return multiplier;
+  }
+
+  for (var i = numberArray.length; i > 0; i--) {
+    var val = parseInt(numberArray[counter]) * getMultiplier(i);
+
+    numberArrayConverted.push(val);
+    counter++;
+  }
+
+  var numberString = "";
+
+  function getThousands(value) {
+    var thousandsArray = value.toString().split("");
+    var thousandsString = "";
+
+    for (var l = 0; l < parseInt(thousandsArray[0]); l++) {
+      thousandsString += "M";
+    }
+
+    return thousandsString;
+  }
+
+  for (var j = 0; j < numberArrayConverted.length; j++) {
+    if (numberArrayConverted[j] > 1000) {
+      numberString += getThousands(numberArrayConverted[j]);
+    } else {
+      var index = numbers.indexOf(numberArrayConverted[j]);
+      numberString += symbols[index];
+    }
+  }
+
+  console.log(numberString);
+
+  return numberString;
+}
+
+convertToRoman(36);
+convertToRoman(1536);
+convertToRoman(1023);
+convertToRoman(3973);
+convertToRoman(9);

@@ -320,8 +320,6 @@ function convertToRoman(num) {
   var numberArrayConverted = [];
   var counter = 0;
 
-  // console.log(numberArray);
-
   function getMultiplier(i) {
     var multiplier = 1;
     for (var k = 1; k < i; k++) {

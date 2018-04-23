@@ -308,7 +308,7 @@ function diffArray(arr1, arr2) {
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
 diffArray([1, "calf", 3, "piglet"], [1, "calf", 3, 4]);*/
 
-//Roman Numeral Converter
+/*//Roman Numeral Converter
 function convertToRoman(num) {
 
   var symbols = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX",
@@ -368,4 +368,38 @@ convertToRoman(36);
 convertToRoman(1536);
 convertToRoman(1023);
 convertToRoman(3973);
-convertToRoman(9);
+convertToRoman(9);*/
+
+/*//Search and Replace
+function myReplace(str, before, after) {
+  var strArr = str.split(" ");
+  var index = strArr.indexOf(before);
+  var beforeFirstLetter = before.split("")[0];
+  var afterStrArr = after.split("");
+
+  if (beforeFirstLetter === beforeFirstLetter.toUpperCase()) {
+    afterStrArr[0] = after.charAt(0).toUpperCase();
+    after = afterStrArr.join("");
+  }
+
+  strArr[index] = after;
+  str = strArr.join(" ");
+  
+  return str;
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting");*/
+
+/*//Boo who
+function booWho(bool) {
+
+  if (typeof bool == "boolean") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+booWho(null);
+booWho(true);*/

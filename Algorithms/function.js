@@ -391,12 +391,7 @@ myReplace("He is Sleeping on the couch", "Sleeping", "sitting");*/
 
 /*//Boo who
 function booWho(bool) {
-
-  if (typeof bool == "boolean") {
-    return true;
-  } else {
-    return false;
-  }
+  return typeof bool === "boolean" ? true : false;
 }
 
 booWho(null);

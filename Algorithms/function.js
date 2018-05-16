@@ -396,3 +396,34 @@ function booWho(bool) {
 
 booWho(null);
 booWho(true);*/
+
+// Pig Latin
+function translatePigLatin(str) {
+  var vowels = ["a", "e", "i", "o", "u"];
+  var strArray = str.split("");
+  var brintToEnd = [];
+
+  if (vowels.indexOf(strArray[0]) != -1) {
+    str += "way";
+  } else {
+
+    for (var i = 0; i < strArray.length; i++) {
+      if (vowels.indexOf(strArray[i]) == -1) brintToEnd.push(strArray[i]);
+      else break;
+    }
+
+    for (var j = 0; j < brintToEnd.length; j++) {
+      strArray.splice(brintToEnd[j], 1);
+      strArray.push(brintToEnd[j]);
+    }
+
+    str = strArray.join("");
+    str += "ay";
+
+  }
+
+  return str;
+}
+
+translatePigLatin("consonant");
+translatePigLatin("eight");

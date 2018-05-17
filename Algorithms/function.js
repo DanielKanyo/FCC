@@ -397,7 +397,7 @@ function booWho(bool) {
 booWho(null);
 booWho(true);*/
 
-// Pig Latin
+/*// Pig Latin
 function translatePigLatin(str) {
   var vowels = ["a", "e", "i", "o", "u"];
   var strArray = str.split("");
@@ -426,4 +426,59 @@ function translatePigLatin(str) {
 }
 
 translatePigLatin("consonant");
-translatePigLatin("eight");
+translatePigLatin("eight");*/
+
+// Smallest Common Multiple
+function smallestCommons(arr) {
+
+  var a = arr[0];
+  var b = arr[1];
+  var numbers = [];
+  var max = Math.max(a, b);
+  var min = Math.min(a, b);
+
+  var m1 = 1;
+  var m2 = 1;
+
+  var res1 = arr[0];
+  var res2 = arr[1];
+
+  var resultValue;
+  var binArray = [];
+
+  for (var i = min; i <= max; i++) {
+    numbers.push(i);
+  }
+
+  for (;;) {
+
+    if (res1 < res2) {
+      res1 = a * m1;
+      m1++;
+    } else {
+      res2 = b * m2;
+      m2++;
+    }
+
+    if (res1 == res2) {
+      for (var j = 0; j < numbers.length; j++) {
+        binArray.push(res1 % numbers[j]);
+      }
+      if (binArray.every(checkEquals)) {
+        resultValue = res1;
+        break;
+      }
+      binArray = [];
+    }
+
+  }
+
+  return resultValue;
+}
+
+function checkEquals(n) {
+  return n == 0;
+}
+
+smallestCommons([1, 5]);
+smallestCommons([23, 18]);

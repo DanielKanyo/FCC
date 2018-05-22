@@ -428,7 +428,7 @@ function translatePigLatin(str) {
 translatePigLatin("consonant");
 translatePigLatin("eight");*/
 
-// Smallest Common Multiple
+/*// Smallest Common Multiple
 function smallestCommons(arr) {
 
   var a = arr[0];
@@ -481,4 +481,23 @@ function checkEquals(n) {
 }
 
 smallestCommons([1, 5]);
-smallestCommons([23, 18]);
+smallestCommons([23, 18]);*/
+
+// Binary Agents
+function binaryAgent(str) {
+  var hexa;
+  var strArray = str.split(" ");
+  var resultArray = [];
+  var resultString = "";
+
+  for (var i = 0; i < strArray.length; i++) {
+    hexa = parseInt(strArray[i], 2);
+    resultArray.push(String.fromCharCode(hexa));
+  }
+
+  resultString = resultArray.join("");
+
+  return resultString;
+}
+
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
